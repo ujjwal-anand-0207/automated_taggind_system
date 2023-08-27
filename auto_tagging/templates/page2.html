@@ -1,0 +1,40 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'styles/style.css' %}" class="rel">
+    <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+    <title>Tagging System</title>
+</head>
+<body>
+   
+    <div class="wrapper">
+        
+        
+        <form action="page2.html">
+            
+            <h1>Tagging System</h1>
+            
+            <img src="{%static 'images/logo.png'%}" alt="Paris" class="center">
+            
+           
+            <div class="input-box">
+                <label for="Question">QUESTION</label>
+                <textarea class="quesarea">{{res.question}}</textarea>         
+                     
+                
+            </div><br>
+            <div class="input-box0">
+                <label for="Title"> GENERATED TAGS</label>
+                <textarea class="tagarea">{{res.tags}}</textarea>
+                
+            </div>
+      
+           
+            
+        </form>
+    </div>
+</body>
+</html>
