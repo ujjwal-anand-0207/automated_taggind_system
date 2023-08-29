@@ -21,7 +21,6 @@ def result(request):
         ftag = ftag + tag + ", "
      
      res.tags = ftag
-     print(res.tags)
    return render(request, 'page2.html',{'res':res})
  
 
