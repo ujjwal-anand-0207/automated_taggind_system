@@ -13,7 +13,7 @@
     <div class="wrapper">
         
         
-        <form action="page2.html">
+        <form >
             
             <h1>Tagging System</h1>
             
@@ -22,19 +22,31 @@
            
             <div class="input-box">
                 <label for="Question">QUESTION</label>
-                <textarea class="quesarea">{{res.question}}</textarea>         
+                <input type="text" id = "quesarea" class="quesarea" value={{res.question}}>         
                      
                 
             </div><br>
             <div class="input-box0">
                 <label for="Title"> GENERATED TAGS</label>
-                <textarea class="tagarea">{{res.tags}}</textarea>
+                <input type="text" id="tagarea" value={{res.tags}}>
                 
-            </div>
-      
-           
-            
+            </div>                      
         </form>
+        <button onclick="myFunction()" class="btn btn1" >Copy Tags</button> 
     </div>
 </body>
+<script>
+    function myFunction() {
+        // Get the text field
+        var copyText = document.getElementById("tagarea");
+       
+        // Select the text field
+        copyText.select();
+        copyText.setSelectionRange(0, 99999); // For mobile devices
+         // Copy the text inside the text field
+        navigator.clipboard.writeText(copyText.value);
+        // Alert the copied text
+        alert("Copied the text: " + copyText.value);
+      }
+</script>
 </html>
